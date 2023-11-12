@@ -7,7 +7,7 @@ import { all_locales, all_providers } from "./data"
  * This is set by the `API_PROXY` environment variable during build if available. otherwise
  * defaults to directly accessing the API.
  */
-const API_BASE = process.env.API_PROXY ?? "https://apis.justwatch.com";
+const API_BASE = process.env.API_PROXY ?? "https://crossorigin.me/https://apis.justwatch.com";
 
 export async function search_for_item(query: string, country: string): Promise<any> {
     const url = `${API_BASE}/content/titles/${country}/popular`
